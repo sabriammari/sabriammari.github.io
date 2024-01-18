@@ -1,0 +1,51 @@
+.demo-5 {
+	--color-text: #c04444;
+	--color-bg: #333;
+	--color-link: #2d2c2b;
+	--color-link-hover: #c14343;
+	--color-info: #fff;
+	--color-main-bg: #595959;
+	--path-fill-1: #03c0ff;
+	--path-fill-2: #000000;
+	--color-title: inherit;
+	--font-size-title: 6vmax;
+	--font-weight-title: 700;
+	--color-menu: #ffffff;
+	--color-menu-hover: #c14343;
+	--font-family-menu: var(--font-family-title);
+	--font-size-menu: 3.5vmax;
+	--font-weight-menu: 400;
+	--button-bg: #fff;
+	--button-circle: #c14343;
+	--button-line: #2d2c2b;
+}
+
+.shape-overlays {
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9990;
+}
+
+.shape-overlays.is-opened {
+	pointer-events: auto;
+}
+
+.shape-overlays__path:nth-of-type(1) {
+	fill: var(--path-fill-1);
+}
+
+.shape-overlays__path:nth-of-type(2) {
+	fill: var(--path-fill-2);
+}
+
+.shape-overlays__path:nth-of-type(3) {
+	fill: var(--path-fill-3);
+}
+
+.shape-overlays__path:nth-of-type(4) {
+	fill: var(--path-fill-4);
+}
