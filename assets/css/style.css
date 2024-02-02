@@ -704,6 +704,24 @@ main {
 .bodyAbout {
   overflow: hidden !important;
 }
+.staggering-grid-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.el {
+    width: 60px;
+    /* Ajustez la largeur de l'élément selon vos préférences */
+    height: 100vh;
+    /* Ajustez la hauteur de l'élément selon vos préférences */
+    background-color: #000000;
+    /* Couleur de l'élément, à ajuster selon vos préférences */
+}
 #about {
   z-index: 3;
   width: 100vw;
