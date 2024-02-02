@@ -128,25 +128,7 @@
                 buttonVisible = !buttonVisible;
             }
         });
-        bttnBack.addEventListener('click', () => {
-            if ( !particles.isAnimating() && !buttonVisible ) {
-                anime.remove(bttnBack);
-                anime({
-                    targets: bttnBack,
-                    duration: 300,
-                    easing: 'easeOutQuint',
-                    opacity: 0,
-                    scale: 0
-                });
-                bttnBack.style.pointerEvents = 'none';
 
-                particles.integrate({
-                    duration: 800,
-                    easing: 'easeOutSine'
-                });
-                buttonVisible = !buttonVisible;
-            }
-        });
     });
 
 })();
