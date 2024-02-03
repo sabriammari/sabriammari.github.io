@@ -1034,12 +1034,12 @@ main {
   font-family: "Genos", sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .profilSkills {
     font-size: 1.3rem !important;
   }
   .skills {
-    margin-top: 10PX !important;
+    margin-top: 10px !important;
     flex-direction: column !important;
   }
   .skills__row {
