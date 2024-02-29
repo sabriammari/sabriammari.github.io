@@ -1346,7 +1346,7 @@ main {
   }
 }
 
-#logo_linkedin:hover,
+#logo_github:hover, #logo_linkedin:hover,
 #logo_email:hover {
   scale: 1.1;
   filter: drop-shadow(0 0 10px #03c0ff);
