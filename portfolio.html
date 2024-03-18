@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Genos:wght@500&display=swap" rel="stylesheet">
     <title>Portfolio de Sabri AMMARI</title>
-    <!-- <script>!function () { document.documentElement.className = "js"; var e, t; (t = document.createElement("style")).innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e || alert("Please view this demo in a modern browser that supports CSS Variables.") }();</script> -->
 
 </head>
 
@@ -238,59 +237,61 @@
 <script src="../assets/js/enterButton.js"></script>
 <script src="../assets/js/overlayMenu.js"></script>
 <script src="../assets/js/main.js"></script>
+
+
 <script>
-
-</script>
-</body>
-    <script>
-$(document).ready(function() {
-    $('.section__title-arrow').css('opacity' , '1');
-
-    // Attachez un gestionnaire d'événements au défilement
-    $(window).scroll(function() {
-    // Obtenez la position de défilement actuelle
-    var scrollPosition = $(this).scrollTop();
-
-    // Déterminez à quelle position vous souhaitez que l'élément disparaisse
-    var triggerPosition = 0; // Changez ceci selon vos besoins
-
-    // Si la position de défilement dépasse le seuil, masquez l'élément
-    if (scrollPosition > triggerPosition) {
-        $('.section__title-arrow').fadeOut(250);
-    } else {
-        $('.section__title-arrow').fadeIn(250);
-    }
-    });
-
-    $('.section').mousemove(function(e) {
-        var mouseX = e.pageX;
-        var mouseY = e.pageY;
-
-        var rotateX1 = -(mouseY / $(this).height() - 0.5) * 10; // Ajustez le coefficient pour la sensibilité
-        var rotateY1 = (mouseX / $(this).width() - 0.5) * 30;
-        
-        var rotateX2 = -(mouseY / $(this).height() - 0.5) * 30 + 75; // Ajustez le coefficient pour la sensibilité
-        var rotateY2 = (mouseX / $(this).width() - 0.5) * 30;
-        
-        var rotateX3 = -(mouseY / $(this).height() - 0.5) * 5; // Ajustez le coefficient pour la sensibilité
-        var rotateY3 = (mouseX / $(this).width() - 0.5) * 30;
-        
-        $('.hover-image1').css({
-            'transform': 'rotateX(' + rotateX1 + 'deg) rotateY(' + rotateY1 + 'deg)'
+    $(document).ready(function() {
+        $('.section__title-arrow').css('opacity' , '1');
+    
+        // Attachez un gestionnaire d'événements au défilement
+        $(window).scroll(function() {
+        // Obtenez la position de défilement actuelle
+        var scrollPosition = $(this).scrollTop();
+    
+        // Déterminez à quelle position vous souhaitez que l'élément disparaisse
+        var triggerPosition = 0; // Changez ceci selon vos besoins
+    
+        // Si la position de défilement dépasse le seuil, masquez l'élément
+        if (scrollPosition > triggerPosition) {
+            $('.section__title-arrow').fadeOut(250);
+        } else {
+            $('.section__title-arrow').fadeIn(250);
+        }
         });
-        $('.hover-image2').css({
-            'transform': 'rotateX(' + rotateX2 + 'deg) rotateY(' + rotateY2 + 'deg)'
-        });
-        $('.hover-image3').css({
-            'transform': 'rotateX(' + rotateX3  + 'deg) rotateY(' + rotateY3 + 'deg)'
-        });
-
-        $('.section').mouseleave(function() {
-            // Réinitialise la rotation lorsque la souris quitte la zone de l'image
-            $('.hover-image1, .hover-image2, .hover-image3').css({
-            'transform': 'rotateX(0deg) rotateY(0deg)'
+    
+        $('.section').mousemove(function(e) {
+            var mouseX = e.pageX;
+            var mouseY = e.pageY;
+    
+            var rotateX1 = -(mouseY / $(this).height() - 0.5) * 10; // Ajustez le coefficient pour la sensibilité
+            var rotateY1 = (mouseX / $(this).width() - 0.5) * 30;
+            
+            var rotateX2 = -(mouseY / $(this).height() - 0.5) * 30 + 75; // Ajustez le coefficient pour la sensibilité
+            var rotateY2 = (mouseX / $(this).width() - 0.5) * 30;
+            
+            var rotateX3 = -(mouseY / $(this).height() - 0.5) * 5; // Ajustez le coefficient pour la sensibilité
+            var rotateY3 = (mouseX / $(this).width() - 0.5) * 30;
+            
+            $('.hover-image1').css({
+                'transform': 'rotateX(' + rotateX1 + 'deg) rotateY(' + rotateY1 + 'deg)'
+            });
+            $('.hover-image2').css({
+                'transform': 'rotateX(' + rotateX2 + 'deg) rotateY(' + rotateY2 + 'deg)'
+            });
+            $('.hover-image3').css({
+                'transform': 'rotateX(' + rotateX3  + 'deg) rotateY(' + rotateY3 + 'deg)'
+            });
+    
+            $('.section').mouseleave(function() {
+                // Réinitialise la rotation lorsque la souris quitte la zone de l'image
+                $('.hover-image1, .hover-image2, .hover-image3').css({
+                'transform': 'rotateX(0deg) rotateY(0deg)'
+                });
             });
         });
     });
-});
-    </script>
+</script>
+
+</body>
+
+</html>
