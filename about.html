@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/menuStyle.css">
-    <!-- <link rel="stylesheet" href="../assets/css/particlesButton.css"> -->
     <link rel="stylesheet" href="../assets/css/webglStyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,75 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Genos:wght@500&display=swap" rel="stylesheet">
     <title>Portfolio de Sabri AMMARI</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-
-            // Masquer l'élément avec la classe "menu"
-            var menuElement = document.querySelector('.menu');
-            var aboutElement = document.querySelector('#about');
-            var logoNavElement = document.querySelector('.logoNav');
-
-
-            // Anime.js animation
-            anime({
-                targets: '.staggering-grid-demo .el',
-                scale: [
-                    { value: 0, easing: 'easeInOutCubic', duration: 1200, delay: 300 },
-                ],
-                delay: anime.stagger(500, { grid: [30, 15], from: 'center' }),
-                complete: function () {
-                    // Retirez l'événement après l'animation
-                    document.removeEventListener('DOMContentLoaded', arguments.callee);
-                    var gridDemoElement = document.querySelector('.staggering-grid-demo');
-                    // Changer la valeur de la propriété z-index à 1
-                    gridDemoElement.style.zIndex = '1';
-                    menuElement.classList.remove('d-none');
-                    aboutElement.classList.remove("d-none");
-                    logoNavElement.classList.remove("d-none");
-
-                }
-            });
-        });
-    </script>
 
 </head>
 
 
 <body class="d-flex text-center bodyAbout demo-5">
-    <div class="staggering-grid-demo">
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <div class="el"></div>
-        <!-- Ajoutez plus d'éléments selon vos besoins -->
-    </div>
+
     <header class="mb-auto headerAbout">
         <div class="main main--demo-5">
             <div class="content--demo-5">
@@ -159,10 +95,15 @@
     </header>
 
     <main class="container-fluid mainAbout">
+
+        <!-- Canvas en tunnel -->
         <canvas id="canvasTunnel" class="experience"></canvas>
         <div class="scrollTarget"></div>
         <div class="vignette-radial"></div>
+        
         <section id="about" class="d-none position-absolute start-0">
+
+            <!-- Début modal Profil -->
             <div class="aboutMe vw-100 position-relative">
                 <div class="cell-div d-flex flex-wrap justify-content-center">
                     <div class="cell-container mx-auto">
@@ -179,13 +120,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="cell-container mx-auto">
-                        <div id="cell3" class="cell">
-                            <div class="inner-cell">
-                                <div id="openModalExperiences" class="titleCell">Expériences</div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="modal" id="modalProfil">
@@ -199,7 +133,7 @@
 
                     <div class="text-center profilDescription">
                         <h1 class="fw-bold profilDescription">Sabri AMMARI</h1>
-                        <h2 class="fw-bold profilDescription">Développeur Web</h2>
+                        <h2 class="fw-bold profilDescription">Développeur Full Stack en recherche d'une alternance</h2>
                         <p class="mt-3 fs-5 mx-3">
                             Fort d'une formation solide en Développement Web et Web Mobile, j'ai acquis une certaine
                             expertise dans la programmation à travers plusieurs langages informatiques.<br>
@@ -211,7 +145,10 @@
                     </div>
                 </div>
             </div>
+            <!-- Fin modal Profil -->
 
+
+            <!-- Début modal Skills -->
             <div class="modal" id="modalSkills">
                 <div class="modal-content">
                     <div class="text-end button-close">
@@ -288,23 +225,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Fin modal Skills -->
 
-            <div class="modal" id="modalExperiences">
-                <div class="modal-content">
-                    <div class="text-end button-close">
-                        <i class="bi bi-x-lg shadowClose close"></i>
-                    </div>
-                    <div class="text-center profilDescription">
 
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
     <footer class="mt-auto text-white-50">
 
-</footer>
+    </footer>
 
 
 
@@ -385,8 +314,6 @@
 <script src="../assets/js/enterButton.js"></script>
 <script src="../assets/js/overlayMenu.js"></script>
 <script src="../assets/js/main.js"></script>
-<script>
 
-</script>
 </body>
 
