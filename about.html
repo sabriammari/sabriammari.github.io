@@ -23,7 +23,38 @@
 
 
 <body class="d-flex text-center bodyAbout demo-5">
-
+    <div class="staggering-grid-demo">
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+        <div class="el"></div>
+    </div>
     <header class="mb-auto headerAbout">
         <div class="main main--demo-5">
             <div class="content--demo-5">
@@ -314,6 +345,38 @@
 <script src="../assets/js/enterButton.js"></script>
 <script src="../assets/js/overlayMenu.js"></script>
 <script src="../assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            // Masquer l'élément avec la classe "menu"
+            var menuElement = document.querySelector('.menu');
+            var aboutElement = document.querySelector('#about');
+            var logoNavElement = document.querySelector('.logoNav');
+
+
+            // Anime.js animation
+            anime({
+                targets: '.staggering-grid-demo .el',
+                scale: [
+                    { value: 0, easing: 'easeInOutCubic', duration: 1200, delay: 300 },
+                ],
+                delay: anime.stagger(500, { grid: [30, 15], from: 'center' }),
+                complete: function () {
+                    // Retirez l'événement après l'animation
+                    document.removeEventListener('DOMContentLoaded', arguments.callee);
+                    var gridDemoElement = document.querySelector('.staggering-grid-demo');
+                    // Changer la valeur de la propriété z-index à 1
+                    gridDemoElement.style.zIndex = '1';
+                    menuElement.classList.remove('d-none');
+                    aboutElement.classList.remove("d-none");
+                    logoNavElement.classList.remove("d-none");
+
+                }
+            });
+        });
+    </script>
 
 </body>
 
