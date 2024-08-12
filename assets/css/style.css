@@ -732,7 +732,7 @@ main {
 .aboutMe {
   transition: all 1s ease-in;
   z-index: 4;
-  transform: translateY(50%) ;
+  transform: translateY(75%) ;
 }
 
 .cell {
@@ -919,7 +919,7 @@ main {
     animation: none;
   }
   .aboutMe {
-    transform: translate(0%, 50%);
+    transform: translate(0%, 100%);
   }
   .cell-container {
     width: 250px;
