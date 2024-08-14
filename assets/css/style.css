@@ -961,7 +961,8 @@ main {
 }
 @media (max-width: 576px) {
   .modal-content {
-  transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+  }
   .modal-content-profil {
     margin-top: 5%;
   }
